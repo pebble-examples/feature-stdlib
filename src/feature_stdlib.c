@@ -26,7 +26,7 @@ static void update_layer_callback(Layer *layer, GContext *ctx) {
 
   // Draw the formatted text
   graphics_context_set_text_color(ctx, GColorBlack);
-  graphics_draw_text(ctx, s_info_text, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD), GRect(10, 5, bounds.size.w, bounds.size.h), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
+  graphics_draw_text(ctx, s_info_text, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD), GRect(PBL_IF_RECT_ELSE(10, 30), PBL_IF_RECT_ELSE(5, 40), bounds.size.w, bounds.size.h), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
 }
 
 static void timer_callback(void *data) {
